@@ -18,3 +18,54 @@
 aws configure
 ```
 </p>
+</details>
+
+----------
+```
+terraform apply -auto-approve
+```
+<details><summary>More terraform</summary>
+<p>
+
+```
+terraform -help
+```
+```
+terraform init 
+```
+```
+terraform validate
+```
+```
+terraform plan
+```
+```
+terraform apply -auto-approve
+```
+```
+terraform workspace show
+```
+```
+terraform destroy
+```
+```
+terraform workspace show
+```
+```
+terraform workspace list
+```
+```
+terraform workspace new dev
+```
+```
+terraform workspace select dev
+```
+
+</p>
+</details>
+
+### Content
+
+| Name | Description | 
+|--|--|
+| xxx01 | xxx
