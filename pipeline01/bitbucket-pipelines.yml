@@ -1,0 +1,23 @@
+trigger: none
+
+pipelines:
+  default:
+    - step:
+        name: Deploying Terraform
+        runs-on: 
+          - 'self.hosted'
+          - 'windows'
+        script:
+          #- terraform --version 
+          #- cd scripts/infrastructure
+          #- ls
+          - terraform init
+          - terraform validate
+          - terraform apply -auto-approve
+
+    # The following deployment steps will be executed for each pipeline run. To configure your steps and conditionally deploy see https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/
+    - step:
+        name: 'Extra Deployment'
+        deployment: extra
+        script:
+          - echo "Your deployment..."
