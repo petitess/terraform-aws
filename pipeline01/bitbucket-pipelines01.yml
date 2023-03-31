@@ -1,5 +1,3 @@
-trigger: none
-
 pipelines:
   default:
     - step:
@@ -8,6 +6,10 @@ pipelines:
           - 'self.hosted'
           - 'windows'
         script:
+          - $env:ARM_CLIENT_ID = 'xxxx-0671-4658-8ee9-xxxxx'
+          - $env:ARM_CLIENT_SECRET = 'xxxx~bxHp88BoyQMXtBTkKKRC2Uk-Xcsrjcxxx'
+          - $env:ARM_TENANT_ID = 'xxxxx-aa48-43c6-a39a-xxxx'
+          - $env:ARM_SUBSCRIPTION_ID = 'xxxxx-1a10-483e-95aa-xxxx'
           #- terraform --version 
           #- cd scripts/infrastructure
           #- ls
@@ -15,7 +17,6 @@ pipelines:
           - terraform validate
           - terraform apply -auto-approve
 
-    # The following deployment steps will be executed for each pipeline run. To configure your steps and conditionally deploy see https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/
     - step:
         name: 'Extra Deployment'
         deployment: staging
