@@ -16,6 +16,11 @@
 1. [Create an AWS access key](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/)
 ```
 aws configure
+aws configure get aws_access_key_id
+aws configure get aws_secret_access_key
+aws configure get region
+aws configure list-profiles
+aws configure set region us-west-1 --profile integ
 ```
 </p>
 </details>
